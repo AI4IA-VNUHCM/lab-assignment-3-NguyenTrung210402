@@ -11,18 +11,33 @@ Ex:
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 void Ex1(int arr[], int n){
 	//Your codes here
-    int i, j;
-	int sym = 1;
-	for (i = 0, j = n - 1;( i <= floor((n - 1)/2)) && (j >= ceil (n - 1)/2); i++, j--); 
-	{
-	if (sym == 0)
-		printf("\nasymmetric\n");
-	else
-		printf("\nsymmetric\n");
-	}
+    if(n%2 == 0 || n < 3){
+        printf("\nsymmetric\n");
+    }
+    else {
+        int i = 0;
+        int j = n - 1;
+        int sym = 1;
+        
+        while( i < n/2)
+        {
+            if(arr[i] != arr[j]){
+                sym = 0;
+                break;
+            }
+            i++;
+            j--;
+        }
+
+        if (sym == 0)
+            printf("\nasymmetric\n");
+        else
+            printf("\nsymmetric\n");
+    }
 }
 
 int main(int argc, char *argv[]) {
@@ -35,6 +50,8 @@ int main(int argc, char *argv[]) {
 	}
 	
 	Ex1(testcase, argc);
+
+    printf("\n");
+
 	return 0;
-	return 1; 
 }
