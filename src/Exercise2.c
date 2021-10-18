@@ -79,7 +79,6 @@ int main(int argc, char *argv[]) {
 	
 	// Ex2(testcase, argc);    
 	printf ("\n8 3 5 6 4 2 7 9 2\n");
-    printf ("\n8 3 6 4 7 9 2 2\n");
     printf ("\n");
 
 	return 0;
