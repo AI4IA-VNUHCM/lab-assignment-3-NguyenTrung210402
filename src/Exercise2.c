@@ -7,7 +7,6 @@ Ex:
 | Output: 8 3 5 6 4 2 7 9 2          |
 |____________________________________|
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -15,6 +14,26 @@ Ex:
 void Ex2(int arr[], int n){
 	//Your codes here
 	
+	for (int i=0; i<n; i++) {
+		for (int j= i+1; j<n; j++) {
+			if (arr[j] %2!=0 && arr[i]%2!=0) {
+				if (arr[j]<arr[i]) {
+					int k1 = arr[i];
+					arr[i]= arr[j];
+					arr[j]=k1;
+				}
+			} else if (arr[j]%2==0 && arr[i]%2==0) {
+				if (arr[j] > arr[i]) {
+					int k2 = arr[i];
+					arr[i] = arr[j];
+					arr[j]= k2;
+				}
+			}
+		}
+	}
+	for (int i=0; i<n; i++) {
+		printf ("%d ", arr[i]);
+	}
 }
 
 int main(int argc, char *argv[]) {
@@ -29,3 +48,5 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+
+	

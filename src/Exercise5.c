@@ -10,10 +10,35 @@ ______________________________________
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 void Ex5(int arr[], int n){
 	//Your codes here
-	
+    int positive[n];
+    int negative[n];
+    int p_count = 0;
+    int n_count = 0;
+
+    for(int i = 0; i < n; i++){
+        if(arr[i] >= 0){
+            positive[p_count] = arr[i];
+            p_count +=1;
+        }else{
+            negative[n_count] = arr[i];
+            n_count +=1;
+        }
+    }
+
+    for(int i = 0; i < p_count; i++){
+        if(i == 0){
+            printf("%d", positive[i]);
+        }else{
+            printf(" %d", positive[i]);
+        }
+    }
+    for(int i = 0; i < n_count; i++){
+        printf(" %d", negative[i]);
+    }
 }
 
 int main(int argc, char *argv[]) {
@@ -22,9 +47,11 @@ int main(int argc, char *argv[]) {
 	int testcase[argc],i;
 	for(i=0; i<argc;i++){
 		testcase[i] = atoi(argv[i+1]);
+		// printf("%d ", testcase[i]);
 	}
-	
-	Ex5(testcase, argc);
-	
+	Ex5(testcase, argc);    
+
+    printf("\n");
+
 	return 0;
 }
