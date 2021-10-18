@@ -19,9 +19,9 @@ void Ex1(int arr[], int n){
 	for (i = 0, j = n - 1;( i <= floor((n - 1)/2)) && (j >= ceil (n - 1)/2); i++, j--); 
 {
 	if (sym == 0)
-		printf("asymmetric");
+		printf(" asymmetric ");
 	else
-		printf("symmetric");
+		printf(" symmetric ");
 	}
 }
 
@@ -31,10 +31,10 @@ int main(int argc, char *argv[]) {
 	int testcase[argc],i;
 	for(i=0; i<argc;i++){
 		testcase[i] = atoi(argv[i+1]);
-		printf("%d", testcase[i]);
+		printf("%d ", testcase[i]);
 	}
 	
-	// Ex1(testcase, argc);
+	Ex1(testcase, argc);
 	
 	return 0;
 }
