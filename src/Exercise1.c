@@ -17,7 +17,7 @@ void Ex1(int arr[], int n){
     int i, j;
 	int sym = 1;
 	for (i = 0, j = n - 1;( i <= floor((n - 1)/2)) && (j >= ceil (n - 1)/2); i++, j--); 
-{
+	{
 	if (sym == 0)
 		printf("\nasymmetric\n");
 	else
@@ -36,4 +36,5 @@ int main(int argc, char *argv[]) {
 	
 	Ex1(testcase, argc);
 	return 0;
+	return 1; 
 }
