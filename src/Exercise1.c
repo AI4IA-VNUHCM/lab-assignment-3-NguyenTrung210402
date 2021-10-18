@@ -16,7 +16,7 @@ Ex:
 void Ex1(int arr[], int n){
 	//Your codes here
     if(n%2 == 0 || n < 3){
-        printf("\nsymmetric\n");
+        printf("\nasymmetric\n");
     }
     else {
         int i = 0;
@@ -55,3 +55,4 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
+
