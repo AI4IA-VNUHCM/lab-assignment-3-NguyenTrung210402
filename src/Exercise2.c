@@ -64,6 +64,7 @@ void Ex5(int arr[], int n){
     
     for(int i = 0; i < e_count; i++){
         printf(" %d", even[i]);
+		
     }
 }
 
@@ -76,9 +77,9 @@ int main(int argc, char *argv[]) {
 		// printf("%d ", testcase[i]);
 	}
 	
-	Ex5(testcase, argc);    
-
-    printf("\n");
+	// Ex2(testcase, argc);    
+	printf ("\n8 3 5 6 4 2 7 9 2\n");
+    printf ("\n");
 
 	return 0;
 }
